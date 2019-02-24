@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ArtSmart! art tool</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="jquery.ui.touch-punch.min.js"></script>
+        <script src="jquery.alterclass.js"></script>
+        <script src="svg-injector.min.js"></script>
+        <link rel="stylesheet" href="artsmart.css">
+        <script src="artsmart.js"></script>
+    </head>
+    <body>
+        <div id="helpDialog" title="How to use" style="display: none;">
+            <ol>
+                <li>Click on one of the shape buttons to add a shape to the canvas.</li>
+                <li>You can use the colored buttons to change the shape's color.
+                    <ul><li>Scroll to see all the controls available.</li></ul>
+                </li>
+                
+                <li>The buttons at the bottom allow you to rotate and change the shape's size.</li>
+                <li>Lastly, you can drag a shape to the trash can if you'd like to get rid of it.</li>
+            </ol>
+            <p>
+            Have fun!
+            <p>
+            <center><button class="ui-button ui-widget ui-corner-all"
+                        onclick="$('#helpDialog').dialog('close');">OK</button></center>
+        </div>
+        <div class="art-part" id="header">ArtSmart! art tool</div>
+        <div class="main-ui-holder art-container">
+            
+            <div class="art-part" id="controls">
+                <div>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="basic_line.png">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="curved_arc.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="zigzag.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="curved_arc_thick.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="dotted_line.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="circle.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="ellipse.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="triangle1.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="triangle2.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="lizard.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="blob.svg">
+                    </button>
+                    <button class="butn art-button">
+                        <img class="button-logo" src="rounded_line.svg">
+                    </button>
+                </div>
+                <div>
+                    <button class="butn color-button dark-red-color"></button>
+                    <button class="butn color-button red-color"></button>
+                    <button class="butn color-button dark-green-color"></button>
+                    <button class="butn color-button green-color"></button>
+                    <button class="butn color-button blue-color"></button>
+                    <button class="butn color-button turquoise-color"></button>
+                    <button class="butn color-button yellow-color"></button>
+                    <button class="butn color-button purple-color"></button>
+                    <button class="butn color-button light-purple-color"></button>
+                    <button class="butn color-button dark-orange-color"></button>
+                    <button class="butn color-button orange-color"></button>
+                    <button class="butn color-button black-color"></button>
+                    <button class="butn color-button dark-gray-color"></button>
+                    <button class="butn color-button gray-color"></button>
+                    <button class="butn color-button white-color"></button>
+                </div>
+                
+                
+            </div>
+            <div class="art-part" id="div2">
+                <div id="canvas">
+                    
+                </div>
+                <div id="controls2">
+                    <img src="trashcan.svg" id="trash-can"/>
+                    <button id="leftRotate" class="action-button ui-button ui-widget ui-corner-all">
+                        <img class="action-image" alt="Rotate left" src="rotate-ccw.svg">
+                    </button>
+                    <button id="rightRotate" class="action-button ui-button ui-widget ui-corner-all">
+                        <img class="action-image" alt="Rotate right" src="rotate-cw.svg">
+                    </button>
+                    <button id="shrinkButton" class="action-button ui-button ui-widget ui-corner-all">
+                        <img class="action-image" alt="Shrink" src="shrink.svg">
+                    </button>
+                    <button id="growButton" class="action-button ui-button ui-widget ui-corner-all">
+                        <img class="action-image" alt="Grow" src="grow.svg">
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
